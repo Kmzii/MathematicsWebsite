@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mathematics Website</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<nav>
+    <label class="logo">Mathematics Website</label>
+    <input type="checkbox" id="menu-click">
+    <label for="menu-click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <ul>
+        <li><a id="home" href="/">Home</a></li>
+        <li><a id="about" href="/about">About</a></li>
+    </ul>
+</nav>
+<section class="page-content">
+    <div class="newton-raphson">
+        <a class="card-description" href="/newton_raphson.html">Newton-Raphson Root Finder</a>
+        <p>Calculate the approximate root using Newton-Raphson Method.</p>
+    </div>
+    <div class="heaviside">
+        <a class="card-description" href="/heaviside.html">Heaviside Function</a>
+        <p>Find the value of the Heaviside function at a specific point x and plot it on a graph.</p>
+    </div>
+</section>
+</body>
+</html>

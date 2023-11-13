@@ -1,0 +1,186 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+/* NAVBAR */
+nav{
+    height: 60px;
+    background: #1b1b1b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 50px;
+}
+nav .logo{
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    margin: 0 10px;
+}
+nav ul li a{
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    padding: 6px 8px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+nav ul li a:hover{
+    color: #1b1b1b;
+    background: white;
+    opacity: 0.9;
+}
+nav .menu-btn i{
+    color:white;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+#menu-click{
+    display: none;
+}
+
+@media (max-width: 700px){
+    nav .menu-btn i{
+        display: block;
+    }
+    #menu-click:checked ~ .menu-btn i:before{
+        content: "\f00d";
+    }
+    nav ul{
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        background: #111;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    #menu-click:checked ~ ul{
+        left: 0;
+    }
+    nav ul li{
+        margin: 40px 0;
+    }
+    nav ul li a{
+        font-size: 20px;
+        display: block;
+    }
+    nav ul li a:hover,
+    nav ul li a:active{
+        color:cyan;
+        background: none;
+    }
+}
+
+/**/
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+.newton-raphson,
+.heaviside,
+.about{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 30px;
+    margin: 30px 30px 0;
+    text-align: left;
+    width: calc(100% - 60px);
+}
+
+.card-description,
+.user-input label {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.card-description:hover {
+    text-decoration: underline;
+}
+ h2{
+     display: flex;
+     justify-content: left;
+     padding: 30px 30px 0;
+ }
+ .user-input,
+ .results {
+     display: flex;
+     flex-direction: column;
+     background-color: white;
+     color: black;
+     border: 1px solid black;
+     padding: 30px;
+     margin: 30px;
+     text-align: left;
+     width: calc(100% - 60px);
+}
+.user-input .input-container{
+    margin: 10px 10px 0;
+}
+.user-input input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+.user-input button {
+    background-color: #1b1b1b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.user-input button:hover {
+    background-color: #333;
+}
+
+.results{
+    display: none;
+    align-items: center;
+    font-weight: bold;
+    font-size: 17px;
+}
+.about #about-head{
+    font-size: 17px;
+    font-weight: bold;
+}
+.about ul{
+    padding-left: 30px  ;
+}
+/* Responsive Styles */
+@media only screen and (max-width: 750px) {
+    .newton-raphson,
+    .heaviside,
+    .user-input,
+    .about{
+        text-align: left;
+        width: calc(100% - 60px);
+    }
+    #graph {
+        max-width: 100%;
+        height: auto;
+    }
+}
